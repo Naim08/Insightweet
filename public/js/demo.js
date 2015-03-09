@@ -13,14 +13,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 'use strict';
+var blown = 0;
 
 $(document).ready(function() {
+  $('body').css('background-image','none');
+
+
+
+  $('#submit_button').hover(function() {
+    $('body').css('background-image','url("../images/NYC2.jpeg" )' );
+
+
+
+    //$("*").css("backgroundColor" ,"#585858");
+    $("#title").css("color","white");
+    $('.whiteText').css("color","white");
+    if(blown >= 1){
+      // do nothing
+    }else{
+      //$('#tBird').animate({width:'250px'},350);
+      blown++;
+    }
+
+    console.log("background added");
+  }, function() {  // on mouse off !!!!!!!!!!!!!!!!!
+
+    //$('#tBird').animate({width:'300px'},350);
+    $('body').css('background-image','none');
+
+    $('.whiteText').css("color","black");
+
+    $("#title").css("color","black");
+    console.log("background removed");
+  }
+);
+
 
   var widgetId = 'vizcontainer', // Must match the ID in index.jade
     widgetWidth = 700, widgetHeight = 700, // Default width and height
-    personImageUrl = 'images/app.png'; // Can be blank
+    personImageUrl = 'images/tutorial.png'; // Can be blank
 
   // Jquery variables
   var $content = $('.content'),
@@ -81,7 +113,6 @@ $(document).ready(function() {
           showTextSummary(response);
           showVizualization(response);
         }
-
       },
       error: function(xhr) {
         $loading.hide();

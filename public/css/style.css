@@ -1,3 +1,48 @@
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-rendering: optimizeLegibility;
+}
+
+body{
+  background-image:url('../images/NYC2.jpg');
+  background-size: cover;
+  transition:background 1s;
+}
+
+#tBird{
+  width:300px;
+  /*height:250px;*/
+}
+
+#background {
+    background-size: 100% auto; /* width and height, can be %, px or whatever. */
+}
+
+*::selection {
+  background: #323232;
+  color: white;
+}
+
+#desc{
+  font-family:Source Sans Pro;
+}
+
+#title{
+    font-size:5em;
+    font-color:#000000 !important
+}
+
+h3{
+  font-family:Montserrat;
+}
+
+h4{
+  font-family:Source Sans Pro;
+}
+
 .img-container img {
   width: 100%;
   height: auto;

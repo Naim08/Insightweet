@@ -5900,13 +5900,12 @@ button.close {
     display: none !important;
   }
 }
-h1 {
-  color: #00b2ef;
-}
+
 h2 {
   color: #00b2ef;
   font-weight: 200;
 }
+
 table.table,
 .table tr td {
   border: 0;
